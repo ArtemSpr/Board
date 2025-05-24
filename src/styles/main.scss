@@ -1,0 +1,107 @@
+@import "./App";
+@import "./reset";
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+// Палітра 1 — Тепла / натуральна
+$matcha: #809671;
+$almond: #e5e0d8;
+$pistache: #b3b792;
+$chai: #d2ab80;
+$carob: #725c3a;
+$vanilla: #e5d2b8;
+
+// Палітра 2 — Холодна / технічна
+$dark-blue: #1a2d42;
+$mid-blue: #2e4156;
+$light-grey1: #aab7b7;
+$light-grey2: #c0c8ca;
+$light-grey3: #d4d8dd;
+
+// Палітра 3 — Монохромна зелена / еко
+$dark-green: #0f2a1d; // Текст, заголовки
+$mid-green1: #375534; // Вторинний текст, активні елементи
+$mid-green2: #6b9071; // Кнопки, акценти
+$light-green: #aec3b0; // Фон елементів
+$very-light-green: #e3eed4; // Загальний фон
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+#root {
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+  background-color: $very-light-green;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  article {
+    position: absolute;
+    width: 5vw;
+    height: 100vh;
+    border-right: 2px solid $light-green;
+    padding-top: 10px;
+
+    section {
+        @include center;
+        margin: 40px 0 40px 0;
+        &:last-child{
+            margin-top: 40vh;
+        }
+    }
+  }
+}
+
+a {
+    @include center;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    padding: 5px 2px;
+    transition: 800ms;
+
+    &:hover {
+        background-color: $light-green;     
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    &:hover .link-title {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+        transition: 800ms;
+      }
+
+    .link-title {
+        position: absolute;
+        top: 35%;
+        left: 100%; 
+        transform: translate(-10px, 0);
+        background-color: $light-green;
+        color: $dark-green;
+        padding: 5px 10px;
+        margin-left: 8px;
+        border-radius: 4px;
+        white-space: nowrap;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 700;
+      
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        pointer-events: none; /* Щоб не блокувати наведення */
+    }
+
+    img {
+        height: 48px;
+    }
+}
