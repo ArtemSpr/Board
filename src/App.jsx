@@ -4,6 +4,11 @@ import "./styles/main.scss";
 import houseIcon from "../public/houseIcon.svg";
 import settingsIcon from "../public/settingsIcon.svg";
 
+// import components
+
+import { useState, useEffect } from "react";
+import React from "react";
+
 function Page(img, title) {
   return (
     <section>
@@ -13,6 +18,22 @@ function Page(img, title) {
       </a>
     </section>
   );
+}
+
+function Time() {
+  const [time, setTime] = useState(new Date().toLocaleTimeString());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(new Date().toLocaleTimeString());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  console.log(time);
+
+  return <span className="time-text">{time}</span>;
 }
 
 function App() {
@@ -25,7 +46,14 @@ function App() {
         {Page(houseIcon, "Home")}
         {Page(settingsIcon, "Settings")}
       </article>
-      <body></body>
+      <div className="body">
+        <header>
+          <nav className="header-clock">
+            <span className="header-weather">dfdfsdsd</span>
+            {Time()}
+          </nav>
+        </header>
+      </div>
     </div>
   );
 }

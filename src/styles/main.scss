@@ -45,6 +45,7 @@ $very-light-green: #e3eed4; // Загальний фон
 
   article {
     position: absolute;
+    background-color: $very-light-green;
     width: 5vw;
     height: 100vh;
     border-right: 2px solid $light-green;
@@ -103,5 +104,20 @@ a {
 
     img {
         height: 48px;
+    }
+}
+
+.header-clock {
+    color: $mid-green1;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+    padding: 20px 20px 0 0 ;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+
+    .header-weather{
+        margin-right: 200px;
     }
 }
