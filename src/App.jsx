@@ -11,6 +11,19 @@ import sunsetIcon from "../public/sunsetIcon.svg";
 import sunriseIcon from "../public/sunriseIcon.svg";
 import snowIcon from "../public/snowIcon.svg";
 import cloudsIcon from "../public/cloudsIcon.svg";
+import gymIcon from "../public/gymIcon.svg";
+import receiptIcon from "../public/receiptIcon.svg";
+import booksIcon from "../public/booksIcon.svg";
+
+import githubIcon from "../public/githubIcon.svg";
+import collegeIcon from "../public/collegeIcon.svg";
+import fullStackIcon from "../public/fullStackIcon.svg";
+import terminalIcon from "../public/terminalIcon.svg";
+import chatgptIcon from "../public/chatgptIcon.svg";
+import colorIcon from "../public/colorIcon.svg";
+import svgIcon from "../public/svgIcon.svg";
+import microsoftIcon from "../public/microsoftIcon.svg";
+import translatorIcon from "../public/translatorIcon.svg";
 
 // import components
 import { useState, useEffect } from "react";
@@ -144,12 +157,127 @@ function App() {
     <div className="main">
       <article>
         {Page(houseIcon, "Home")}
-        {Page(houseIcon, "Home")}
-        {Page(houseIcon, "Home")}
-        {Page(houseIcon, "Home")}
+        {Page(gymIcon, "Gym")}
+        {Page(booksIcon, "Books")}
+        {Page(receiptIcon, "Receipts")}
         {Page(settingsIcon, "Settings")}
       </article>
       <div className="body">
+        <div className="links">
+          <div className="links-title">
+            <span>Links</span>
+          </div>
+          <div className="links-content">
+            <div className="link-item-1">
+              <a
+                href="https://github.com/ArtemSpr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="link-image">
+                  <img src={githubIcon}></img>
+                </div>
+              </a>
+              <span>GitHub</span>
+            </div>
+            <div className="link-item-2">
+              <a
+                href="https://login.microsoftonline.com/common/DeviceAuthTls/reprocess"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="link-image">
+                  <img src={collegeIcon}></img>
+                </div>
+              </a>
+              <span>College</span>
+            </div>
+            <div className="link-item-3">
+              <a
+                href="https://fullstackopen.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="link-image">
+                  <img src={fullStackIcon}></img>
+                </div>
+              </a>
+              <span>Fullstack</span>
+            </div>
+            <div className="link-item-4">
+              <a
+                href="https://dev.to/alagrede/terminal-setup-make-your-mac-terminal-awesome-4ecc"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="link-image">
+                  <img src={terminalIcon}></img>
+                </div>
+              </a>
+              <span>Terminal</span>
+            </div>
+            <div className="link-item-5">
+              <a
+                href="https://chatgpt.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="link-image">
+                  <img src={chatgptIcon}></img>
+                </div>
+              </a>
+              <span>Chat Gpt</span>
+            </div>
+            <div className="link-item-6">
+              <a
+                href="https://colorhunt.co/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="link-image">
+                  <img src={colorIcon}></img>
+                </div>
+              </a>
+              <span>Color Hut</span>
+            </div>
+            <div className="link-item-7">
+              <a
+                href="https://www.svgrepo.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="link-image">
+                  <img src={svgIcon}></img>
+                </div>
+              </a>
+              <span>SVG icons</span>
+            </div>
+            <div className="link-item-8">
+              <a
+                href="https://m365.cloud.microsoft/?auth=2"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="link-image">
+                  <img src={microsoftIcon}></img>
+                </div>
+              </a>
+              <span>Microsoft 365</span>
+            </div>
+            <div className="link-item-9">
+              <a
+                href="https://translate.google.com/?sl=uk&tl=ru&op=translate"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="link-image">
+                  <img src={translatorIcon}></img>
+                </div>
+              </a>
+              <span>Translator</span>
+            </div>
+          </div>
+        </div>
         <header>
           <nav className="header-clock">
             {Time()}
